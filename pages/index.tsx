@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
- import { signIn } from "next-auth/react";
- import { unstable_getServerSession } from "next-auth";
- import { GetServerSideProps } from "next";
- import { authOptions } from "./api/auth/[...nextauth]";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { signIn } from "next-auth/react";
+import { unstable_getServerSession } from "next-auth";
+import { GetServerSideProps } from "next";
+import { authOptions } from "./api/auth/[...nextauth]";
 
 const Home: NextPage = () => {
   return (
@@ -16,21 +16,23 @@ const Home: NextPage = () => {
 
         <div>
           <div>
-            <button className='bg-[#7289DA] text-white py-4 pl-10 pr-10 rounded-sm'
-               onClick={(e) => {
+            <button
+              className="bg-[#7289DA] text-white py-4 pl-10 pr-10 rounded-sm"
+              onClick={(e) => {
                 e.preventDefault();
                 signIn("discord");
               }}
-            >Login with Discord</button>
+            >
+              Login with Discord
+            </button>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const session = await unstable_getServerSession(req, res, authOptions);
