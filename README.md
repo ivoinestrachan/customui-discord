@@ -1,27 +1,37 @@
-# Next.js + Tailwind CSS Example
+# My Customizable UI Discord Application
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a sample application that uses NextAuth and the Discord API to authenticate users and interact with the Discord platform.
 
-## Deploy your own
+## Getting Started
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+To get started, you will need to create a new application in the Discord Developer Portal and get your client ID and client secret. Once you have those, you can use them to configure the Discord provider in the `next-auth.config.js` file.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+You will also need to configure your redirect URL in the Discord Developer Portal. This is the URL that the user will be redirected to after they have granted or denied permission to your application.
 
-## How to use
+## Running the Application
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+To run the application, you will need to have Node.js and npm installed on your machine. Once you have those, you can run the following commands in your project's directory:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```
+npm install
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+```
+npm run dev
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+This will install the necessary dependencies and start the development server. You can then access the application at `http://localhost:3000`.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Deploying the Application
+
+When deploying the application to a production environment, you will need to use a valid domain name as the redirect URL. You should also use a proper domain name and SSL certificate to protect your users' data when you deploy your application to production.
+
+## Terms of Service
+
+By using this application, you agree to abide by the terms of service of the Discord API and the Discord Developer Portal. These terms can be found on the Discord Developer Portal at https://discord.com/developers/docs/legal.
+
+## Disclaimer
+
+This is just an example, you should always read the official documentation and understand the terms of service of the Discord API before building a production application.
+
+Please make sure to follow the Discord developer guidelines and terms of service when building your application, and also to keep your client secret safe, as it allows access to your application's data and interactions.
